@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <label for="message">message</label>
+    <!-- <label for="message">message</label>
     <textarea id="message"></textarea>
     <input type="number" value="1" id="shift">
     <button id="codeBtn">Code</button>
@@ -17,9 +17,54 @@
     <br>
     <label for="codeMessage">coded message</label>
     <textarea id="codeMessage"></textarea>
-    <button id="decode">Decode</button>
+    <button id="decode">Decode</button> -->
+
+    <div class="container">
+
+            
+    <div class="left block">
+        <div class="block-text">
+            <p class="block-title">Codification</p>
+            <p class="block-description">Codify your secret message. Pick the shift accordingly.</p>
+        </div>
+        <div class="block-btns">
+            <input class="shift-range" id="code-shift" type="number" value="1" min="0" max="99">
+            <button class="codify">Codify</button>
+            <button class="code-delete">Delete</button>
+        </div>
+        <textarea class="input-area" id="code-message-input"></textarea>
+    </div>
+    
+    <div class="middle">
+        <div class="middle-top">
+            <img class="logo" src="images/logo.png" alt="logo">
+            <div class="logo-text">
+                
+            </div>
+        </div>
+        <div class="middle-bottom">
+            <textarea id="code-message-result"></textarea>
+            <textarea id="decode-message-result"></textarea>
+        </div>
+    </div>
+    
+    <div class="right block">
+        <div class="block-text">
+            <p class="block-title">Decoding</p>
+            <p class="block-description">Decode your codified message. Pick the shift accordingly.</p>
+        </div>
+        <div class="block-btns">
+            <input class="shift-range" id="decode-shift" type="number" value="-1" min="-99" max="0">
+            <button class="decodify">Decodify</button>
+            <button class="decode-delete">Delete</button>
+        </div>
+        <textarea class="input-area" id="decode-message-input"></textarea>
+    </div>
+
+
+    </div>
     
 
-    <script src="script.js" defer async type="module"></script>
+    <script src="script.js" defer type="module"></script>
 </body>
 </html>
