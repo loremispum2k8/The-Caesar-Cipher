@@ -13,9 +13,6 @@ textarea{
     height: 50px;
     width: 150px;
 }
-img{
-    width: 100px;
-}
 
 
 .container{
@@ -25,7 +22,7 @@ img{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border: 2px dotted blue;
+    /*border: 2px dotted blue;*/
     gap: 30px;
 }
 .block{
@@ -33,7 +30,7 @@ img{
     flex-direction: column;
     align-items: center;
     width: 290px;
-    border: 1px dotted red;
+    /*border: 1px dotted red;*/
     gap: 15px;
     height: 100%;
 }
@@ -78,26 +75,64 @@ button{
 }
 
 .middle{
-    border: 1px dotted black;
+    /*border: 1px dotted black;*/
     flex: 1;
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 100%;
     justify-content: center;
-    gap: 20px;
 }
 .middle-top, .middle-bottom{
     flex: 1;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     width: 100%;
 }
 .middle-top{
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
-.middle-top *{
-    border: 1px solid blue;
+.logo{
+    width: 135px;
+}
+.logo-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+}
+.logoName{
+    font-size:26px;
+}
+.info-icon{
+    width: 24px;
+    padding: 2px;
+}
+.middle-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.result-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.left-label{
+    margin-left: 10px;
+}
+.right-label{
+    align-self: flex-end;
+    margin-right: 10px;
+}
+.result-textareas{
+    height: 100%;
+    width: 100%;
+    padding: 14px 18px;
 }
