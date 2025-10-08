@@ -1,25 +1,5 @@
 import {caesarCipher} from "./functions.js"
 
-// let messageInput = document.querySelector('#message')
-// let shiftValue = document.querySelector('#shift')
-// let codedMessageInput = document.querySelector('#codeMessage')
-// let codeBtn = document.querySelector('#codeBtn')
-// let deleteBtn = document.querySelector('#deleteBtn')
-// let decode = document.querySelector('#decode')
-
-
-// decode.addEventListener('click',()=>{
-//     if(shiftValue.value < 0){
-//         shiftValue.value = Math.ceil(shiftValue.value)
-//     }else{
-//         shiftValue.value = -Math.floor(shiftValue.value)
-//     }
-//     messageInput.value= caesarCipher(codedMessageInput.value,Number(shiftValue.value))
-//     codedMessageInput.value = ''
-// })
-
-
-
 // CODING MESSAGE 
 let codeShift = document.querySelector('#code-shift')
 let codeBtn = document.querySelector('.codify')
@@ -48,3 +28,22 @@ let decodeBtn = document.querySelector('.decodify')
 let deleteDecodeBtn = document.querySelector('.decode-delete')
 let decodeMessageInput = document.querySelector('#decode-message-input')
 let decodeMessageReciever = document.querySelector('#decode-message-result')
+
+decodeBtn.addEventListener('click',()=>{
+    if(decodeShift.value < -99){
+        decodeShift.value = -99
+     }else if(decodeShift.value < 0){
+        decodeShift.value = Math.ceil(decodeShift.value)
+     }else if(decodeShift.value > 99){
+        decodeShift.value = -99
+     }else{
+        decodeShift.value = -Math.floor(decodeShift.value)
+     }
+     decodeMessageReciever.value = ''
+     decodeMessageReciever.value = caesarCipher(decodeMessageInput.value, Number(decodeShift.value))
+})
+
+deleteDecodeBtn.addEventListener('click',()=>{
+    decodeMessageReciever.value = ''
+    decodeMessageInput.value = ''
+})
