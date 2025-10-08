@@ -44,7 +44,6 @@ body{
 }
 textarea{
     resize: none;
-    height: 50px;
     width: 150px;
     border: 2px solid #363636;;
     border-radius: 14px;
@@ -163,8 +162,6 @@ button{
     justify-content: center;
 }
 .middle-top, .middle-bottom{
-
-    /*border: 1px solid red;*/
     width: 100%;
 }
 .middle-top{
@@ -304,10 +301,110 @@ button{
 .hideInfo{
     display: none;
 }
+.showTM{
+    display: none;
+}
+.top-logo-container{
+    display: none;
+ }
+ input[type=number]::-webkit-outer-spin-button{
+    display: none;
+ }
+ .mobileInfo{
+    display: none;
+    color: #ACACAC;
+ }
 
 
-@media screen and (min-width:1300px) {
-    
+@media screen and (max-width:1300px) {
+    .mobileInfo{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: -30px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgb(54, 54, 54);
+    }
+    body{
+        padding-top: 50px;
+    }
+    .light{
+        position: fixed;
+        margin-bottom:-10%;
+    }
+    body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        align-items: start;
+        justify-content: center;
+    }
+    textarea{
+        height: 300px;
+    }
+    .container{
+        flex-direction: column;
+        max-width: 400px;
+        min-width: 350px;
+        padding-bottom: 50px;
+        height: fit-content;
+    }
+    .middle{
+        gap: 0px;
+        width: 100%;
+    }
+    .middle-bottom{
+        flex-direction: column;
+    }
+    .right-label,.left-label{
+        align-self: center;
+    }
+    .middle-top{
+        display: none;
+    }
+    .block{
+        width: 100%;
+        height: 400px;
+    }
+    .hideTM{
+        display: none;
+    }
+    .showTM{
+        display: flex;
+    }
+    .result-container{
+        height: 240px;
+    }
+    .result-textareas{
+        height: 180px;
+    }
+    .top-logo-container{
+        margin-bottom: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        gap: 6px;
+    }
+    .info-icon{
+        display: none;
+    }
+}
 
-
+@media screen and (max-width:400px){
+    .logo{
+        width: 100px;
+    }
+    .logoName{
+        font-size: 22px;
+    }
+    .block-title{
+        font-size: 20px;
+    }
+    .container{
+        max-width: 340px;
+        min-width: 280px;
+    }
 }

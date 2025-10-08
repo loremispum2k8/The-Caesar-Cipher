@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="info-container hideInfo">
         <div class="info-box">
             <img class="closeIcon" src="images/close.png" alt="close icon">
@@ -24,9 +25,26 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container">  
+    <div class="top-logo-container">
+            <img class="logo" src="images/logo.png" alt="logo">
+            <div class="logo-text">
+                <p class="logoName">The Caesar Cipher</p>
+            </div>
+    </div>
 
-            
+    <div class="mobileInfo">
+        <div class="info-section">
+            <p class="info-title">History</p>
+            <p class="info">The Caesar cipher is one of the oldest known encryption methods, named after the Roman general Julius Caesar. He used it to send secret military messages so that enemies couldn’t understand them if intercepted. Caesar reportedly used a shift of three, meaning each letter was replaced by the one three places later in the alphabet. For example, A became D, and B became E. A fun fact is that this simple code was strong enough for ancient times since most people couldn’t read at all, making it surprisingly effective in his era.</p>
+        </div>
+        <div class="info-section">
+            <p class="info-title">How it works</p>
+            <p class="info">The Caesar cipher works by shifting each letter in the alphabet by a fixed number of positions. If the shift is three, A becomes D, B becomes E, and so on. To read the message, the receiver shifts the letters back by the same number. The cipher is easy to use and understand but offers very little protection today, since there are only 25 possible shifts, making it easy to crack through trial and error.</p>
+        </div>
+    </div>
+    
+        
     <div class="left block">
         <div class="block-text">
             <p class="block-title">Codification</p>
@@ -53,9 +71,9 @@
                 <label class="labels left-label" for="code-message-result">Coded</label>
                 <textarea class="result-textareas" id="code-message-result"></textarea>
             </div>
-            <div class="result-container">
+            <div class="result-container hideTM">
                 <label class="labels right-label" for="decode-message-result">Decoded</label>
-                <textarea class="result-textareas" id="decode-message-result"></textarea>
+                <textarea class="result-textareas hideTMTextarea" id="decode-message-result"></textarea>
             </div>
         </div>
     </div>
@@ -73,9 +91,11 @@
         <textarea class="input-area" id="decode-message-input"></textarea>
     </div>
 
-
+    <div class="result-container showTM">
+        <label class="labels right-label" for="decode-message-result">Decoded</label>
+        <textarea class="result-textareas showTMTextarea" id="decode-message-result"></textarea>
     </div>
-
+    </div>
 
     <div class="light"></div>
     

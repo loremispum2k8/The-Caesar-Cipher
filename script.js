@@ -55,10 +55,48 @@ let showInfo = document.querySelector('.info-icon')
 let closeInfo = document.querySelector('.closeIcon')
 
 showInfo.addEventListener('click',()=>{
+    console.log(1)
     infoContainer.classList.add('showInfo')
     infoContainer.classList.remove('hideInfo')
 })
 closeInfo.addEventListener('click',()=>{
     infoContainer.classList.remove('showInfo')
     infoContainer.classList.add('hideInfo')
+})
+
+
+
+
+
+
+
+
+
+
+
+let showTMTextarea = document.querySelector('.showTMTextarea')
+let hideTMTextarea = document.querySelector('.hideTMTextarea')
+if(window.innerWidth < 1300){
+    decodeMessageReciever = document.querySelector('.showTMTextarea')
+    console.log('Tablet')
+    hideTMTextarea.id = 'noid'
+    showTMTextarea.id = 'decode-message-result' 
+}else if(window.innerWidth > 1300){
+    decodeMessageReciever = document.querySelector('.hideTMTextarea')
+    console.log('PC')
+    showTMTextarea.id = 'noid'
+    hideTMTextarea.id = 'decode-message-result'         
+}
+window.addEventListener('resize',()=>{
+    if(window.innerWidth < 1300){
+    decodeMessageReciever = document.querySelector('.showTMTextarea')
+    console.log('Tablet')
+    hideTMTextarea.id = 'noid'
+    showTMTextarea.id = 'decode-message-result' 
+}else if(window.innerWidth > 1300){
+    decodeMessageReciever = document.querySelector('.hideTMTextarea')
+    console.log('PC')
+    showTMTextarea.id = 'noid'
+    hideTMTextarea.id = 'decode-message-result'         
+}
 })
