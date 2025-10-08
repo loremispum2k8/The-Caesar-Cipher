@@ -47,3 +47,18 @@ deleteDecodeBtn.addEventListener('click',()=>{
     decodeMessageReciever.value = ''
     decodeMessageInput.value = ''
 })
+
+
+// INFO POP UP
+let infoContainer = document.querySelector('.info-container')
+let showInfo = document.querySelector('.info-icon')
+let closeInfo = document.querySelector('.closeIcon')
+
+showInfo.addEventListener('click',()=>{
+    infoContainer.classList.add('showInfo')
+    infoContainer.classList.remove('hideInfo')
+})
+closeInfo.addEventListener('click',()=>{
+    infoContainer.classList.remove('showInfo')
+    infoContainer.classList.add('hideInfo')
+})
