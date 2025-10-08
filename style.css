@@ -21,7 +21,7 @@
     filter: blur(100px);
     border-radius: 1700px;
     background:linear-gradient(to bottom, #101010 0%, #373636 100%);
-    position: absolute;
+    position: fixed;
     bottom: 0;
     margin-bottom:-7%;
 }
@@ -32,7 +32,6 @@
     box-sizing: border-box;
 }
 body{
-    overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
@@ -307,7 +306,7 @@ button{
 .top-logo-container{
     display: none;
  }
- input[type=number]::-webkit-outer-spin-button{
+ .shift-range::-webkit-outer-spin-button, .shift-range::-webkit-inner-spin-button{
     display: none;
  }
  .mobileInfo{
