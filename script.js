@@ -1,5 +1,9 @@
 import {caesarCipher} from "./functions.js"
 
+window.addEventListener('load',()=>{
+    document.body.classList.add('showEverything')
+})
+
 // CODING MESSAGE 
 let codeShift = document.querySelector('#code-shift')
 let codeBtn = document.querySelector('.codify')
@@ -55,13 +59,14 @@ let showInfo = document.querySelector('.info-icon')
 let closeInfo = document.querySelector('.closeIcon')
 
 showInfo.addEventListener('click',()=>{
-    console.log(1)
+    infoContainer.style.display = 'flex'
     infoContainer.classList.add('showInfo')
     infoContainer.classList.remove('hideInfo')
 })
 closeInfo.addEventListener('click',()=>{
     infoContainer.classList.remove('showInfo')
     infoContainer.classList.add('hideInfo')
+    infoContainer.removeAttribute('style')
 })
 
 

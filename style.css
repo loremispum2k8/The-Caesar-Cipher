@@ -32,6 +32,7 @@
     box-sizing: border-box;
 }
 body{
+    opacity: 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -51,8 +52,11 @@ textarea{
     color: #ACACAC;
     font-size: 14px;
     font-family: 'Regular';
+    transition: border 0.1s;
 }
-
+textarea:hover{
+    border: 1px solid #ACACAC;
+}
 
 .container{
     z-index: 999;
@@ -121,7 +125,7 @@ textarea{
     transition: background-color 0.1s;
 }
 .code-delete:hover, .decode-delete:hover{
-    background-color: #363636;
+    border: 2px solid #ACACAC;
 }
 .shift-range{
     color: #ACACAC;
@@ -135,6 +139,7 @@ textarea{
     font-family:"SemiBold";
     font-size: 14px;
     cursor: pointer;
+    transition: border 0.1s;
 }
 .shift-range::-webkit-inner-spin-button{
     opacity: 1;
@@ -193,6 +198,10 @@ button{
     padding: 2px;
     cursor: pointer;
     margin-bottom: -4px;
+    transition: filter 0.1s;
+}
+.info-icon:hover{
+    filter: brightness(1.5);
 }
 .middle-bottom{
     flex: 2;
@@ -292,32 +301,33 @@ button{
     right: 0;
     margin-top: 14px;
     margin-right: 14px;
+    transition: filter 0.1s;
+}
+.closeIcon:hover{
+    filter: brightness(1.5);
 }
 
-
 .showInfo{
-    opacity: 0;
     animation-name: showInfoAnimation;
-    animation-duration: 0.2s;
+    animation-duration: 0.15s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
 }
 .hideInfo{
-    opacity: 1;
     animation-name: hideInfoAnimation;
-    animation-duration: 0.2s;
+    animation-duration: 0.15s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
 }
 @keyframes showInfoAnimation{
     0% {opacity: 0;}
-    100% {opacity: 1; display: flex;}
+    100% {opacity: 1;}
 }
 @keyframes hideInfoAnimation{
     0% {opacity: 1;}
-    100% {opacity: 0;display: none;}
+    100% {opacity: 0; display: none;}
 }
 
 
@@ -330,10 +340,30 @@ button{
  .shift-range::-webkit-outer-spin-button, .shift-range::-webkit-inner-spin-button{
     display: none;
  }
+ .shift-range:hover{
+    border: 2px solid #ACACAC;
+ }
  .mobileInfo{
     display: none;
     color: #ACACAC;
  }
+
+ .showEverything{
+    animation-name: showEverything;
+    animation-duration: 0.15s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+ }
+ @keyframes showEverything {
+    0%{
+       opacity: 0; 
+    }
+    100%{
+        opacity: 100%;
+    }
+ }
+
 
 
 @media screen and (max-width:1300px) {
