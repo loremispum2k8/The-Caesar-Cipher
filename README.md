@@ -1,7 +1,7 @@
 # **The Caesar Cipher**
 [The Caesar Cipher website](https://loremispum2k8.github.io/The-Caesar-Cipher/) lets you encrypt and decrypt messages by shifting the letters of the alphabet. You can choose how many positions to shift to create a simple secret code.
 
-![Desktop](screenshot.png)
+![Desktop](screenshott.png)
 
 ## **How It Works**
 Each letter in the message is shifted by a fixed number of positions in the alphabet.
